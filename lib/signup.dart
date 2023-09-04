@@ -131,6 +131,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       child: const Padding(
                         padding: EdgeInsets.only(left: 15, right: 15),
                         child: TextField(
+                          obscureText: true,
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             focusColor: Colors.white,

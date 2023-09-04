@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_app_food/otp_input_widget.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({super.key});
@@ -10,6 +11,12 @@ class OtpScreen extends StatefulWidget {
 }
 
 class _OtpScreenState extends State<OtpScreen> {
+  final TextEditingController _fieldOne = TextEditingController();
+  final TextEditingController _fieldTwo = TextEditingController();
+  final TextEditingController _fieldThree = TextEditingController();
+  final TextEditingController _fieldFour = TextEditingController();
+
+  String? _otp;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,94 +64,10 @@ class _OtpScreenState extends State<OtpScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Container(
-                          width: 70,
-                          height: 70,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(50),
-                            color: const Color.fromRGBO(232, 165, 7, 1),
-                          ),
-                          child: const TextField(
-                            maxLength: 1,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 22,
-                            ),
-                            cursorColor: Colors.white,
-                            decoration: InputDecoration(
-                              border: InputBorder.none,
-                            ),
-                            keyboardType: TextInputType.number,
-                          ),
-                        ),
-                        Container(
-                          width: 70,
-                          height: 70,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(50),
-                            color: const Color.fromRGBO(232, 165, 7, 1),
-                          ),
-                          child: const TextField(
-                            maxLength: 1,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 22,
-                            ),
-                            cursorColor: Colors.white,
-                            decoration: InputDecoration(
-                              border: InputBorder.none,
-                            ),
-                            keyboardType: TextInputType.number,
-                          ),
-                        ),
-                        Container(
-                          width: 70,
-                          height: 70,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(50),
-                            color: const Color.fromRGBO(232, 165, 7, 1),
-                          ),
-                          child: const TextField(
-                            maxLength: 1,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 22,
-                            ),
-                            cursorColor: Colors.white,
-                            decoration: InputDecoration(
-                              border: InputBorder.none,
-                            ),
-                            keyboardType: TextInputType.number,
-                          ),
-                        ),
-                        Container(
-                          width: 70,
-                          height: 70,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(50),
-                            color: const Color.fromRGBO(232, 165, 7, 1),
-                          ),
-                          child: const TextField(
-                            maxLength: 1,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 22,
-                            ),
-                            cursorColor: Colors.white,
-                            decoration: InputDecoration(
-                              border: InputBorder.none,
-                            ),
-                            keyboardType: TextInputType.number,
-                          ),
-                        ),
+                        OtpInputWidget(_fieldOne, true), // auto focus
+                        OtpInputWidget(_fieldTwo, false),
+                        OtpInputWidget(_fieldThree, false),
+                        OtpInputWidget(_fieldFour, false)
                       ],
                     ),
                     const SizedBox(
@@ -153,7 +76,14 @@ class _OtpScreenState extends State<OtpScreen> {
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          setState(() {
+                            _otp = _fieldOne.text +
+                                _fieldTwo.text +
+                                _fieldThree.text +
+                                _fieldFour.text;
+                          });
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color.fromRGBO(232, 165, 7, 1),
                           fixedSize: const Size(360, 45),
