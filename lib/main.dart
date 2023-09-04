@@ -20,7 +20,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        "/": (context) => const HomeScreen(),
+        "/": (context) => const LoginScreen(),
         "/login": (context) => const LoginScreen(),
         "/signup": (context) => const SignupScreen(),
         "/otp_verify": (context) => const OtpScreen(),

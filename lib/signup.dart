@@ -60,94 +60,112 @@ class _SignupScreenState extends State<SignupScreen> {
                             color: Colors.white),
                       ),
                     ),
-                    Container(
-                      width: 360,
-                      height: 55,
-                      margin: const EdgeInsets.symmetric(vertical: 5),
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.white),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: const Padding(
-                        padding: EdgeInsets.only(left: 15, right: 15),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            focusColor: Colors.white,
-                            label: Text(
-                              'Name',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w400),
-                            ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderSide:
+                                const BorderSide(color: Colors.white, width: 1),
+                            borderRadius: BorderRadius.circular(10),
                           ),
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500,
+                          border: OutlineInputBorder(
+                            borderSide:
+                                const BorderSide(color: Colors.white, width: 1),
+                            borderRadius: BorderRadius.circular(10),
                           ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(
+                                color: Color.fromRGBO(232, 165, 7, 1),
+                                width: 1),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          focusColor: Colors.white,
+                          label: const Text(
+                            'Name',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400),
+                          ),
+                        ),
+                        style: const TextStyle(
+                          fontSize: 12,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                     ),
-                    Container(
-                      width: 360,
-                      height: 55,
-                      margin: const EdgeInsets.symmetric(vertical: 5),
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.white),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: const Padding(
-                        padding: EdgeInsets.only(left: 15, right: 15),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            focusColor: Colors.white,
-                            label: Text(
-                              'Username, email or mobile number',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w400),
-                            ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderSide:
+                                const BorderSide(color: Colors.white, width: 1),
+                            borderRadius: BorderRadius.circular(10),
                           ),
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500,
+                          border: OutlineInputBorder(
+                            borderSide:
+                                const BorderSide(color: Colors.white, width: 1),
+                            borderRadius: BorderRadius.circular(10),
                           ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(
+                                color: Color.fromRGBO(232, 165, 7, 1),
+                                width: 1),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          focusColor: Colors.white,
+                          label: const Text(
+                            'Username, email or mobile number',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400),
+                          ),
+                        ),
+                        style: const TextStyle(
+                          fontSize: 12,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                     ),
-                    Container(
-                      width: 360,
-                      height: 55,
-                      margin: const EdgeInsets.symmetric(vertical: 5),
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.white),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: const Padding(
-                        padding: EdgeInsets.only(left: 15, right: 15),
-                        child: TextField(
-                          obscureText: true,
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            focusColor: Colors.white,
-                            label: Text(
-                              'Password',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w400),
-                            ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      child: TextField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderSide:
+                                const BorderSide(color: Colors.white, width: 1),
+                            borderRadius: BorderRadius.circular(10),
                           ),
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500,
+                          border: OutlineInputBorder(
+                            borderSide:
+                                const BorderSide(color: Colors.white, width: 1),
+                            borderRadius: BorderRadius.circular(10),
                           ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(
+                                color: Color.fromRGBO(232, 165, 7, 1),
+                                width: 1),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          focusColor: Colors.white,
+                          label: const Text(
+                            'Password',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400),
+                          ),
+                        ),
+                        style: const TextStyle(
+                          fontSize: 12,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                     ),
