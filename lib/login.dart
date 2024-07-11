@@ -172,15 +172,17 @@ class _LoginScreenState extends State<LoginScreen> {
                                   emailvalue = (email.value).toString();
                                   passValue = (password.value).toString();
                                 });
-                                _formkey.currentState!.validate()
-                                    ? Navigator.pushNamed(
-                                        context, '/otp_verify')
-                                    : ScaffoldMessenger.of(context)
-                                        .showSnackBar(
-                                        const SnackBar(
-                                            content: Text(
-                                                'errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr')),
-                                      );
+                                if (_formkey.currentState!.validate()) {
+                                  _formkey.currentState!.save();
+                                  Navigator.pushNamed(context, '/otp_verify');
+                                } else {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                      content: Text(
+                                          'Your Email or password is wrong.'),
+                                    ),
+                                  );
+                                }
                               },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor:
